@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Student Management System</h1>
+    <button onclick="toggleDarkMode()" class="btn" style="background-color: #555;">🌙 Dark Mode</button>
+    <br><br>
+
+    <a href="{{ url_for('new_student') }}" class="btn">Add New Student</a>
+    <a href="{{ url_for('list_students') }}" class="btn">Student List</a>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>

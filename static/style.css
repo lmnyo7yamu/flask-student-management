@@ -1,0 +1,109 @@
+/* Centered Layout and Basic Settings */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering the layout */
+    transition: background-color 0.4s, color 0.4s; /* Manual Fix 3: Smooth dark mode transition */
+}
+
+h1, h2 {
+    margin-top: 30px;
+}
+
+/* Styled Form & Spacing & Rounded Corners */
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 320px;
+    margin-top: 15px;
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Styled Buttons & Hover Effects */
+.btn, input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s; /* Manual Fix 1: Smooth hover transition */
+}
+
+.btn:hover, input[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.04); /* Slight zoom on hover */
+}
+
+/* Styled Table */
+table {
+    width: 80%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Manual Fix 2: Added table shadow */
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* REQUIREMENT 5: Dark Mode Classes */
+body.dark-mode {
+    background-color: #18191a;
+    color: #e4e6eb;
+}
+
+body.dark-mode form, body.dark-mode table {
+    background-color: #242526;
+    color: #e4e6eb;
+}
+
+body.dark-mode input, body.dark-mode textarea {
+    background-color: #3a3b3c;
+    color: white;
+    border: 1px solid #555;
+}
+
+body.dark-mode th {
+    background-color: #2c2d2e;
+}
+
+.error-msg {
+    color: #d93025;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.success-msg {
+    color: #1e8e3e;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
